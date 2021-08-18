@@ -650,6 +650,7 @@ public class CustomersActivity extends AppCompatActivity {
                                     }
                                 }
 
+
                                 listview_customadpte = new ListviewAdaptercart();
                                 listview_customer_veg.setAdapter(listview_customadpte);
 
