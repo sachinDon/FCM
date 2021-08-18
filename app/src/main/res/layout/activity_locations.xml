@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.LocationsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_locations_hrading"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/text_title_revieworder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="FPM Location"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/text_back_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_locations_hrading">
+
+        <ListView
+            android:id="@+id/listview_locationslist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/text_addd_save22"
+            android:divider="@color/white" />
+        <TextView
+            android:id="@+id/text_addd_save22"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Save"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            android:background="@drawable/roundedgreen"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_result_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No data"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="@font/sanfranciscodisplay_bold"/>
+    <ProgressBar
+        android:id="@+id/progress_location"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

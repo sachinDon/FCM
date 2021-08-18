@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.OrderlistActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_orderlist_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/text_title_orderdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Order Details"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_back_orderdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grouptablevicecolor"
+        android:layout_below="@+id/relative_orderlist_title">
+
+
+        <ScrollView
+            android:id="@+id/scrollView_orderlists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/text_orderlist_cancel">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/scroll_row_first_dr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounderwhite">
+
+                    <TextView
+                        android:id="@+id/text_orlist_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Details"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:textColor="@color/black"/>
+
+
+
+                    <TextView
+                        android:id="@+id/scroll_border_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_below="@+id/text_orlist_title"/>
+                    <TextView
+                        android:id="@+id/text_orderid_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:layout_below="@+id/scroll_border_address"
+                        android:textColor="@color/black"
+                        android:text="Order_id: ffdsf-dsff-dfdff-dffdssfd-dfds"/>
+
+                    <TextView
+                        android:id="@+id/text_orderlist_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"
+                        android:layout_below="@+id/text_orderid_details"
+                        android:textColor="@color/black"
+                        android:text="Status: Pending"/>
+
+                    <TextView
+                        android:id="@+id/text_orderlist_datetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"
+                        android:layout_below="@+id/text_orderlist_status"
+                        android:textColor="@color/black"
+                        android:text="Date: 20/12/83"/>
+
+                    <TextView
+                        android:id="@+id/text_orderlist_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"
+                        android:layout_below="@+id/text_orderlist_datetime"
+                        android:textColor="@color/black"
+                        android:text="Payment: Cash On Dilevery"/>
+
+                    <TextView
+                        android:id="@+id/text_orderlist_totalamt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"
+                        android:layout_below="@+id/text_orderlist_payment"
+                        android:textColor="@color/black"
+                        android:text="Total: Rs250"/>
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_scroll_sec_dr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scroll_row_first_dr"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounderwhite">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Description"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/black"
+                        />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_dyn_orderlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_scroll_sec_dr"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grouptablevicecolor"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/scroll_row_forth_dr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/linear_dyn_orderlist"
+                    android:background="@drawable/rounderwhite">
+
+                    <TextView
+                        android:id="@+id/text_orlist_address_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:textColor="@color/black"/>
+
+
+
+                    <TextView
+                        android:id="@+id/scroll_border_address11"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_below="@+id/text_orlist_address_title"/>
+                    <TextView
+                        android:id="@+id/text_orderlist_addrss_dr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="15dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:layout_below="@+id/scroll_border_address11"
+                        android:textColor="@color/black"
+                        android:text="Sachin mokashi at post neharungar nimai tal tsgaon distc sangli pin 416312"/>
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/scroll_row_forth_dr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/scroll_row_forth_dr"
+                    android:background="@drawable/rounderwhite">
+
+                    <TextView
+                        android:id="@+id/text_orlist_address_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sabji Mandi Address"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:textColor="@color/black"/>
+
+
+
+                    <TextView
+                        android:id="@+id/scroll_border_address111"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_below="@+id/text_orlist_address_title1"/>
+                    <TextView
+                        android:id="@+id/text_orderlist_addrss_dr1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="15dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:layout_below="@+id/scroll_border_address111"
+                        android:textColor="@color/black"
+                        android:text="Sachin mokashi at post neharungar nimai tal tsgaon distc sangli pin 416312"/>
+
+
+
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </ScrollView>
+
+
+            <TextView
+                android:id="@+id/text_orderlist_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounderwhite"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sanfranciscodisplay_medium"
+                android:textSize="18sp"
+                android:text="Cancel Order"
+                android:gravity="center"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

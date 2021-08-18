@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/boderline_bottom1px">
+    <TextView
+            android:id="@+id/text_location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: Sachin Mokashi"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/text_location_addicon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="15sp"
+        android:layout_marginBottom="4dp"
+        android:textSize="15sp"
+        android:background="@drawable/location"
+        android:fontFamily="@font/sanfranciscodisplay_regular"
+        android:layout_below="@+id/text_location_name"
+        android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/text_location_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginBottom="4dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/sanfranciscodisplay_regular"
+            android:layout_below="@+id/text_location_name"
+            android:layout_toEndOf="@+id/text_location_addicon"
+
+            android:textColor="@color/black"
+            android:text="Vileparle"/>
+
+    <TextView
+            android:id="@+id/text_location_Distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15sp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/sanfranciscodisplay_semibold"
+            android:layout_below="@+id/text_location_address"
+            android:textColor="@color/black"
+            android:text="Distance: 0m"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        >
+
+
+
+        <TextView
+            android:id="@+id/text_location_info"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:fontFamily="@font/sanfranciscodisplay_regular"
+            android:textColor="@color/white"
+            android:background="@drawable/info"
+            android:text="i"/>
+
+        <TextView
+            android:id="@+id/text_location_stock"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/text_location_info"
+            android:fontFamily="@font/sanfranciscodisplay_regular"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/stocks"/>
+        <TextView
+            android:id="@+id/text_location_stock1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@+id/text_location_stock"
+            android:fontFamily="@font/sanfranciscodisplay_regular"
+            android:textColor="@color/color_green1"
+            android:layout_centerHorizontal="true"
+           android:text="Stock"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_location_selects"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/sanfranciscodisplay_regular"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/unchecked"/>
+
+</RelativeLayout>
+
+</RelativeLayout>
+

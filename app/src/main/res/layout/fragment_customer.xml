@@ -1,0 +1,557 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context="info.wkweb.com.vmart.CustomerFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <SearchView
+        android:id="@+id/cust_home_searchView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_backroundview"
+        android:queryBackground="@color/color_backroundview"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:closeIcon="@drawable/closes"
+        android:searchIcon="@drawable/searchs"
+        />
+        <TextView
+            android:id="@+id/cust_home_textviewserView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+                        android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/cust_home_locationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cust_home_searchView">
+
+            <RelativeLayout
+                android:id="@+id/relative_cust_home_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+               >
+                <TextView
+                    android:id="@+id/today_price_custhome"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tdprice"/>
+
+                <TextView
+                    android:id="@+id/today_price_vend_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Today Price"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/color_backroundview1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/today_price_custhome"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relatives_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/relative_cust_home_price"
+                >
+                <TextView
+                    android:id="@+id/text_location"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/locationnew"/>
+
+                <TextView
+                    android:id="@+id/text_location_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Location"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/color_backroundview1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/text_location"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+<ScrollView
+    android:id="@+id/scroll_cust_homes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible"
+    android:layout_below="@+id/cust_home_locationview">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_brand_slider"
+                android:layout_width="match_parent"
+                android:layout_height="205dp">
+
+                <TextView
+                    android:id="@+id/text_bootomborder"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/backroundblue"/>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    android:layout_below="@+id/text_bootomborder"
+                    />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/viewPager_brand"
+                    android:layout_alignParentStart="true"
+                    app:ci_width="8dp"
+                    app:ci_height="8dp"
+                    app:ci_drawable="@drawable/circleindicator"
+                    android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/backroundblue"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_fm_speak_slider"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:layout_below="@+id/relative_brand_slider"
+                >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager_our_fm"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator_our_fm"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/viewPager_our_fm"
+                    android:layout_alignParentStart="true"
+                    app:ci_width="8dp"
+                    app:ci_height="8dp"
+                    app:ci_drawable="@drawable/circleindicator"
+                    android:layout_marginBottom="10dp" />
+
+
+                <TextView
+                    android:id="@+id/text_our_fm_speak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Our Farmers Speak"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/pink"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/backroundblue"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_banner_slider"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:layout_below="@id/relative_fm_speak_slider"
+                >
+
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/viewPager_banner"
+                    android:layout_alignParentStart="true"
+                    app:ci_width="8dp"
+                    app:ci_height="8dp"
+                    app:ci_drawable="@drawable/circleindicator"
+                    android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/backroundblue"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_source_fm_slider"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:layout_below="@+id/relative_banner_slider"
+                >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager_source_fm"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp"
+                    />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator_source_fm"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/viewPager_source_fm"
+                    android:layout_alignParentStart="true"
+                    app:ci_width="8dp"
+                    app:ci_height="8dp"
+                    app:ci_drawable="@drawable/circleindicator"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/text_source_fm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Source Farmlands"
+                    android:gravity="center"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/pink"
+                    android:textSize="20sp"/>
+
+
+            </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/relative_source_fm_slider"
+    android:background="@color/backroundblue">
+
+    <LinearLayout
+                android:id="@+id/linear_info1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+
+              >
+
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundblueblak">
+
+                    <TextView
+                        android:id="@+id/text_contactus_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/contactus3"/>
+
+                    <TextView
+                        android:id="@+id/text_contactus_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/text_contactus_img"
+                        android:text="ContactUs"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+                    <TextView
+                        android:id="@+id/text_contactus_text_eid1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/text_contactus_img"
+                        android:text="info@fairpricemandi.com"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"/>
+
+                    <TextView
+                        android:id="@+id/text_contactus_text_eid2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_below="@id/text_contactus_text_eid1"
+                        android:text="sales@fairpricemandi.com"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"/>
+
+
+                    <TextView
+                        android:id="@+id/text_contactus_text_eid3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_below="@id/text_contactus_text_eid2"
+                        android:text="fairpricemandi@gmail.com"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundblueblak">
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                       android:layout_alignParentStart="true"
+                        android:background="@color/backroundblue"/>
+                    <RelativeLayout
+                        android:id="@+id/relative_customer_aboutus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/text_aboutus_image_2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/aboutus3"/>
+
+                        <TextView
+                            android:id="@+id/text_abouts3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_below="@+id/text_aboutus_image_2"
+                            android:text="AboutUs"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+    <LinearLayout
+                android:id="@+id/linear_info2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/linear_info1"
+                android:weightSum="2">
+
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundblueblak">
+
+                    <TextView
+                        android:id="@+id/text_franchise_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/franchise3"/>
+
+                    <TextView
+                        android:id="@+id/text_franchise_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/text_franchise_img"
+                        android:text="Partner with us"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+                    <TextView
+                        android:id="@+id/text_franchise_text_eid1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/text_franchise_img"
+                        android:text="info@fairpricemandi.com"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"/>
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/text_franchise_text_eid2"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:layout_marginStart="20dp"-->
+                        <!--android:layout_marginTop="1dp"-->
+                        <!--android:layout_below="@+id/text_franchise_text_eid1"-->
+                        <!--android:text="fairpricemandi@gmail.com"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:textColor="@color/colorAccent"-->
+                        <!--android:fontFamily="@font/sanfranciscodisplay_regular"/>-->
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundblueblak">
+                    <TextView
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/backroundblue"/>
+
+
+                    <TextView
+                        android:id="@+id/text_carrer_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/career3"/>
+
+                    <TextView
+                        android:id="@+id/text_carrer_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/text_carrer_img"
+                        android:text="Career"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+                    <TextView
+                        android:id="@+id/text_carrer_text_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_below="@+id/text_carrer_img"
+                        android:text="Send me resume at this email address:"
+                        android:textSize="13sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"/>
+
+                    <TextView
+                        android:id="@+id/text_carrer_text_eid1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_below="@+id/text_carrer_text_title"
+                        android:text="fairpricemandi@gmail.com"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+</RelativeLayout>
+        </RelativeLayout>
+</ScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progress_customer_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/text_result_cust_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No data available"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:fontFamily="@font/sanfranciscodisplay_bold"/>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,205 @@
+ <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="info.wkweb.com.vmart.HomeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <SearchView
+            android:id="@+id/vend_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@color/color_backroundview"
+            android:queryHint="Search Here"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@color/color_backroundview"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:closeIcon="@drawable/closes"
+            android:searchIcon="@drawable/searchs"
+            />
+
+        <RelativeLayout
+            android:id="@+id/vend_locationview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boderline_bottom1px"
+            android:layout_below="@+id/vend_searchView">
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/relative_vendortodayprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@+id/relatives_location">
+                <TextView
+                    android:id="@+id/today_price_vend"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tdprice"/>
+
+                <TextView
+                    android:id="@+id/today_price_vend_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Today Price"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/color_backroundview1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/today_price_vend"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative_vendor_divs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="9dp"
+                android:layout_toEndOf="@+id/relative_vendortodayprice">
+                <TextView
+                    android:id="@+id/today_price_divs"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/delivery"/>
+
+                <TextView
+                    android:id="@+id/today_price_vend_divs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Deliverys"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/color_backroundview1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/today_price_divs"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative_vendor_custrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="9dp"
+                android:layout_toEndOf="@+id/relative_vendor_divs">
+                <TextView
+                    android:id="@+id/today_price_custrate"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/custrate1"/>
+
+                <TextView
+                    android:id="@+id/today_price_vend_custrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Customer Rate"
+                    android:gravity="center"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/color_backroundview1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/today_price_custrate"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative_slects_homecat"
+                android:layout_width="135dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="9dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/blackline_border">
+
+                <TextView
+                    android:id="@+id/text_setcat_homecat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
+                    android:layout_toStartOf="@+id/text_arro_custcat"
+                    android:fontFamily="@font/sanfranciscodisplay_semibold"
+                    android:text="All"/>
+
+                <TextView
+                    android:id="@+id/text_arro_custcat"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/sanfranciscodisplay_semibold"
+                    android:background="@drawable/exparrow"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:layout_below="@+id/vend_locationview"
+            android:scrollbars="vertical"
+            android:id="@+id/recyclerView_vend"
+            tools:context="example.javatpoint.com.recyclerviewlist.MainActivity">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/text_result_vendor_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No data available"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:fontFamily="@font/sanfranciscodisplay_bold"/>
+        <ProgressBar
+            android:id="@+id/progress_homevend"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+
+</FrameLayout>

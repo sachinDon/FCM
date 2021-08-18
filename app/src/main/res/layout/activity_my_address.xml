@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.MyAddressActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_myaddress_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/text_back_chnage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Address List"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_back_myaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_addlist_myaddress"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/add1"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_myaddress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_myaddress_title"
+        >
+
+
+
+        <TextView
+            android:id="@+id/text_buy_myaddress"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Buy Now"
+            android:gravity="center"
+            android:fontFamily="@font/sanfranciscodisplay_bold"
+            android:textColor="@color/black"
+            android:background="@drawable/roundedgreen"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <ScrollView
+            android:id="@+id/scrollView_myaddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/text_buy_myaddress">
+
+            <LinearLayout
+                android:id="@+id/linear_myaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress_myaddress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

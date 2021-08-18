@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FarmerBillListActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_farmersbills_lists_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_backroundview">
+        <TextView
+            android:id="@+id/text_title_farmersbills12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Bill"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_back_farmersbills12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linear_farmerbill_title12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_below="@+id/relative_farmersbills_lists_title"
+        android:background="@drawable/bottom_borderline">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_bold"
+            android:textSize="16sp"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:maxLines="1"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_bold"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_bold"
+            android:textSize="16sp"
+
+            />
+
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_farmerbill_title12">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefresh_farmerbill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/listview_farmerlist1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/white" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <TextView
+            android:id="@+id/text_result_farmer1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/orderlist"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/sanfranciscodisplay_bold"/>
+
+        <ProgressBar
+            android:id="@+id/progress_farmerlist1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

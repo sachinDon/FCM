@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/edit_black_border">
+
+        <TextView
+            android:id="@+id/text_select_addresslist"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/check"/>
+        <TextView
+            android:id="@+id/text_name_addresslist"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/text_select_addresslist"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="Sachin mokashi"/>
+
+        <TextView
+            android:id="@+id/text_gen_addresslist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@+id/text_name_addresslist"
+            android:layout_toEndOf="@+id/text_select_addresslist"
+
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="Sachin mokashi 67A at post neharunagar nimani taluka ytasgaion dist sangli staemaharashtra pin 416312"/>
+
+        <TextView
+            android:id="@+id/text_mobile_addresslist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@+id/text_gen_addresslist"
+            android:layout_toEndOf="@+id/text_select_addresslist"
+
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="Phone: 9850017872"/>
+
+        <TextView
+            android:id="@+id/text_border_cart_addresslist"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/text_mobile_addresslist"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/relative_remove_address"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_below="@+id/text_border_cart_addresslist">
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rel_remove_address"
+    android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/text_border_linear_addresslist"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/black"
+        android:background="@color/black"/>
+            <RelativeLayout
+                android:id="@+id/rel_remove_address1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+    <TextView
+        android:id="@+id/text_remove_myadd"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/remove"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:text="Remove"
+        android:textSize="16sp"
+        android:layout_toEndOf="@+id/text_remove_myadd"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true"/>
+            </RelativeLayout>
+</RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/rel_edit_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        android:id="@+id/text_edit_myadd"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/edit"
+                        android:layout_centerVertical="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:text="Edit"
+
+                        android:textSize="16sp"
+                        android:layout_toEndOf="@+id/text_edit_myadd"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

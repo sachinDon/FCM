@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.ReviewOrderActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_revieworder_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/text_title_revieworder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="ReviewOrder"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_back_revieworder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grouptablevicecolor"
+        android:layout_below="@+id/relative_revieworder_title">
+
+
+        <ScrollView
+            android:id="@+id/scrollView_revieworder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/relative_review_bottom">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/scroll_row_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounderwhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adreess"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/scroll_change_addd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/red"/>
+
+                <TextView
+                    android:id="@+id/scroll_border_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_below="@+id/scroll_change_addd"/>
+                <TextView
+                    android:id="@+id/scroll_address_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15sp"
+                    android:layout_marginBottom="7dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sanfranciscodisplay_regular"
+                    android:layout_below="@+id/scroll_border_address"
+                    android:textColor="@color/black"
+                    android:text="sachin mokashi at post neharungar nimani tal tasgaon ist sangli"/>
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/scroll_row_first1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/scroll_row_first"
+                    android:background="@drawable/rounderwhite">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sabji Mandi Adreess"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/scroll_change_addd1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change"
+                        android:textSize="16sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:fontFamily="@font/sanfranciscodisplay_medium"
+                        android:textColor="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/scroll_border_address1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray"
+                        android:layout_below="@+id/scroll_change_addd1"/>
+                    <TextView
+                        android:id="@+id/scroll_address_type1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="15sp"
+                        android:layout_marginBottom="7dp"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/sanfranciscodisplay_regular"
+                        android:layout_below="@+id/scroll_border_address1"
+                        android:textColor="@color/black"
+                        android:text="sachin mokashi at post neharungar nimani tal tasgaon ist sangli"/>
+
+                </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/scroll_row_sec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scroll_row_first1"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounderwhite">
+
+                <TextView
+                    android:id="@+id/text_scroll_paymettitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Mode"
+                    android:textColor="@color/black"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:paddingLeft="15dp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:background="@drawable/boderline_bottom1px"/>
+
+                <TextView
+                    android:id="@+id/scroll_check_cod"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/check"
+                    android:layout_below="@+id/text_scroll_paymettitle"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"/>
+                <TextView
+                    android:id="@+id/text_title_cod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Cash On Delivery"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/scroll_check_cod"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/sanfranciscodisplay_regular"
+                    android:layout_below="@+id/text_scroll_paymettitle"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:id="@+id/text_check_online"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/text_title_cod"
+                    android:layout_below="@+id/text_scroll_paymettitle"
+                    android:background="@drawable/unchecked"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Online"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/text_check_online"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/text_scroll_paymettitle"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/sanfranciscodisplay_regular"
+                    android:layout_marginBottom="15dp"/>
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_scroll_thridrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scroll_row_sec"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounderwhite">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Product"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/myorderchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textSize="16sp"
+                    android:text="Change"
+                    android:layout_marginEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentEnd="true"
+                   />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_dyanamicrow_revieworder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_scroll_thridrow"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grouptablevicecolor"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/relative_review_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:background="@color/black"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/text_review_total"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sanfranciscodisplay_medium"
+                android:textSize="22sp"
+                android:text="Rs 100"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/text_revieworder_buy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Buy Now"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:fontFamily="@font/sanfranciscodisplay_medium"
+                android:background="@color/color_green"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.FarmerActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+    android:layout_width= "match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/image_frmaer_logo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/fpm"/>
+
+
+    <TextView
+        android:id="@+id/text_f_order"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/image_frmaer_logo"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="45dp"
+        android:text="Todays Order"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_blue"
+        android:fontFamily="@font/sanfranciscodisplay_semibold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_f_bill"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_f_order"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="25dp"
+        android:text="Bill Book"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_blue"
+        android:fontFamily="@font/sanfranciscodisplay_semibold"
+        android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/text_f_his"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/text_f_bill"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="25dp"
+            android:text="Daily Item Report"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/round_back_blue"
+            android:fontFamily="@font/sanfranciscodisplay_semibold"
+            android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_f_profile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_f_his"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="15dp"
+        android:text="Logout"
+        android:gravity="center"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_blue"
+        android:fontFamily="@font/sanfranciscodisplay_semibold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/text_f_aboutus"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_f_profile"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="15dp"
+        android:text="About Us"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_blue"
+        android:fontFamily="@font/sanfranciscodisplay_semibold"
+        android:textSize="18sp"/>
+
+</RelativeLayout>
+</ScrollView>
+</RelativeLayout>

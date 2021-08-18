@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/image_vend"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="7dp"
+      android:layout_marginLeft="7dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:siShape="@drawable/shape_rounded_rectangle"
+        app:siSquare="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/default1"/>
+
+    <TextView
+        android:id="@+id/text_title_vend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Brinjal "
+        android:textAlignment="viewStart"
+        android:lines="1"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignTop="@+id/image_vend"
+        android:layout_toEndOf="@+id/image_vend"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_bold"/>
+
+    <TextView
+        android:id="@+id/text_title_vend_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price: 10 rupees/1k g"
+        android:lines="1"
+        android:layout_marginTop="10dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:layout_toStartOf="@+id/text_title_vend_Addcart"
+        android:layout_below="@+id/text_title_vend"
+        android:layout_toEndOf="@+id/image_vend"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/color_green1"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+    <TextView
+        android:id="@+id/text_title_vend_Addcart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AddCart"
+        android:paddingLeft="15dp"
+        android:paddingTop="7dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/roundedgreen"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+    <TextView
+        android:id="@+id/text_border_vend"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/image_vend"
+        android:background="@color/white"/>
+
+</RelativeLayout>

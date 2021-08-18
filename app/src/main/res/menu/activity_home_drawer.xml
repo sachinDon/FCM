@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/vhome"
+            android:title="Home" />
+
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/vorder1"
+            android:title="Your order" />
+        <item
+            android:id="@+id/nav_addcart"
+            android:icon="@drawable/editlist"
+            android:title="Add Cart"
+            />
+
+        <item
+            android:id="@+id/nav_delete"
+            android:icon="@drawable/vdelete"
+            android:title="Profile" />
+
+        <item
+            android:id="@+id/nav_billbook"
+            android:icon="@drawable/vdelete"
+            android:title="Bill Book" />
+
+        <item
+            android:id="@+id/nav_aboutUs"
+            android:icon="@drawable/vabout"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/nav_Patners"
+            android:icon="@drawable/patnar"
+            android:title="Partner with us" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

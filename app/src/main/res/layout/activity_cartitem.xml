@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.CartitemActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_cartitem_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_backroundview">
+        <TextView
+            android:id="@+id/text_back_cartitem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Cart"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_back_cartitem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_dyanamicrow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_cartitem_title"
+        >
+
+        <TextView
+            android:id="@+id/text_cart_subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_above="@+id/text_cart_buy"
+            android:text="Subtotal(3 Items): 1456$"
+            android:fontFamily="@font/sanfranciscodisplay_semibold"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:layout_marginTop="1dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/text_cart_buy"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="Proceed to Buy"
+            android:gravity="center"
+            android:fontFamily="@font/sanfranciscodisplay_bold"
+            android:textColor="@color/black"
+            android:background="@drawable/roundedgreen"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="7dp"
+            />
+
+
+        <ScrollView
+            android:id="@+id/scrollView_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/text_cart_subtotal">
+
+            <LinearLayout
+                android:id="@+id/linear_dyanamicrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/text_result_cust_cartsitems1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/emptycart"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:fontFamily="@font/sanfranciscodisplay_bold"/>
+        <ProgressBar
+            android:id="@+id/progress_venders_cart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

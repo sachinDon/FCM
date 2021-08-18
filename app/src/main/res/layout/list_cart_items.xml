@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/image_vend"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="7dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:siShape="@drawable/shape_rounded_rectangle"
+        app:siSquare="true"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/default1"/>
+
+
+
+    <TextView
+        android:id="@+id/text_title_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cabbage"
+        android:textAlignment="viewStart"
+        android:lines="1"
+        android:layout_marginTop="-4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignTop="@+id/image_vend"
+        android:layout_toEndOf="@+id/image_vend"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_bold"/>
+
+    <TextView
+        android:id="@+id/text_title_vend_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price: 20 rupees/1kg"
+        android:lines="1"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/text_title_cart"
+        android:layout_toEndOf="@+id/image_vend"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_semibold"/>
+
+    <TextView
+        android:id="@+id/text_title_vend_pricetotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: 4 x 20 = 80 $"
+        android:lines="1"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/text_title_vend_price"
+        android:layout_toEndOf="@+id/image_vend"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_semibold"/>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/text_title_vend_pricetotal"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginStart="20dp">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_cart_minus"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:text="-"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:gravity="center"-->
+            <!--android:fontFamily="@font/sanfranciscodisplay_bold"-->
+            <!--android:textSize="20sp"-->
+            <!--android:background="@color/gray"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_cart_qtytitle"-->
+            <!--android:layout_width="70dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:text="4"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_toEndOf="@+id/text_cart_minus"-->
+            <!--android:fontFamily="@font/sanfranciscodisplay_bold"-->
+            <!--android:textSize="16sp"-->
+            <!--android:background="@color/white"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/text_cart_plus"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:text="+"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_toEndOf="@+id/text_cart_qtytitle"-->
+            <!--android:fontFamily="@font/sanfranciscodisplay_bold"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:background="@color/gray"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <EditText
+        android:id="@+id/edit_vender_purch"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/edit_black_border"
+        android:inputType="number"
+        android:hint="Qty"
+        android:ellipsize="end"
+        android:ems="10"
+        android:gravity="center"
+        android:maxLines="1"
+        android:maxLength="5"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/text_title_vend_pricetotal"/>
+
+    <TextView
+        android:id="@+id/text_cart_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_below="@+id/text_title_vend_pricetotal"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/sanfranciscodisplay_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:background="@drawable/delete1"/>
+
+    <TextView
+        android:id="@+id/text_border_cart"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_cart_delete"
+        android:background="@color/gray"/>
+
+</RelativeLayout>

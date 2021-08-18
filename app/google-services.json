@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1062836803148",
+    "firebase_url": "https://vmart-d7605.firebaseio.com",
+    "project_id": "vmart-d7605",
+    "storage_bucket": "vmart-d7605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062836803148:android:6fe0356227f2536d44c6e9",
+        "android_client_info": {
+          "package_name": "info.wkweb.com.vmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062836803148-aoqcua00r117mejgd2rk83jrjdg7l6tb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.wkweb.com.vmart",
+            "certificate_hash": "8aa345b0f454fa30874b16758aa05c070fc961cd"
+          }
+        },
+        {
+          "client_id": "1062836803148-10gaa5k31bhul0gcpvb93153ms24kou0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8HBbAnVeGMe_r11YKr86pfoetkhQeV_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062836803148-10gaa5k31bhul0gcpvb93153ms24kou0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

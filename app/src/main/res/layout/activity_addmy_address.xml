@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.AddmyAddressActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_addd_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_backroundview">
+        <TextView
+            android:id="@+id/text_back_addd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Address"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_back_addd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_addd_title">
+
+        <ScrollView
+            android:id="@+id/scrollView_myaddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+                <EditText
+                    android:id="@+id/edit_addd_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="18dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:maxLines="1"
+                    android:inputType="text|textNoSuggestions"
+                    android:hint="Full Name"
+                    android:background="@drawable/blackline_border"/>
+
+                <EditText
+                    android:id="@+id/edit_addd_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:maxLines="1"
+                    android:inputType="text|textNoSuggestions"
+                    android:layout_below="@+id/edit_addd_fullname"
+                    android:hint="Flat/House/Office No."
+                    android:background="@drawable/blackline_border"/>
+
+
+                <EditText
+                    android:id="@+id/edit_adddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:maxLines="5"
+                    android:scrollbars="vertical"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:text=""
+                    android:paddingTop="4dp"
+                    android:paddingBottom="5dp"
+                    android:minHeight="45dp"
+                    android:inputType="textMultiLine|text|textNoSuggestions"
+                    android:layout_below="@+id/edit_addd_home"
+                    android:hint="Area/City"
+                    android:background="@drawable/blackline_border"/>
+
+                <EditText
+                    android:id="@+id/edit_landmark_addd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:maxLines="1"
+                    android:inputType="text|textNoSuggestions"
+                    android:layout_below="@+id/edit_adddress"
+                    android:hint="Landmark"
+                    android:background="@drawable/blackline_border"/>
+
+                <EditText
+                    android:id="@+id/edit_pncode_addd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:layout_below="@+id/edit_landmark_addd"
+                    android:hint="Pincode"
+                    android:background="@drawable/blackline_border"/>
+
+                <EditText
+                    android:id="@+id/edit_mobilenumber_addd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:textStyle="normal"
+                    android:maxLines="1"
+                    android:inputType="phone"
+                    android:layout_below="@+id/edit_pncode_addd"
+                    android:hint="Mobile No."
+                    android:background="@drawable/blackline_border"/>
+
+                <TextView
+                    android:id="@+id/text_addd_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_below="@+id/edit_mobilenumber_addd"
+                    android:text="Save"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/sanfranciscodisplay_medium"
+                    android:textColor="@color/black"
+                    android:background="@drawable/rounderwhite"
+                    android:layout_centerHorizontal="true"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

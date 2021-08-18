@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.FarmerOrderActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_farmertop"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/color_backroundview">
+            <TextView
+                android:id="@+id/text_top_farmer_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:text="Orders"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/sanfranciscodisplay_medium"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/text_back_farmer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="40dp"
+                android:text="Back"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="@font/sanfranciscodisplay_medium"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefresh_farmerorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_farmertop">
+
+        <ListView
+            android:id="@+id/listview_farmerorderlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/white"
+            />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <TextView
+            android:id="@+id/text_result_farmer_order"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/orderlist"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:fontFamily="@font/sanfranciscodisplay_bold"/>
+
+        <ProgressBar
+            android:id="@+id/progress_farmer_order"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

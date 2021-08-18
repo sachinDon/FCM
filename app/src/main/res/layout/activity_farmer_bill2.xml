@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FarmerBillActivity2">
+    <RelativeLayout
+        android:id="@+id/relative_farmer_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_backroundview">
+        <TextView
+            android:id="@+id/text_back_cartcusti_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Bill"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/text_back_farmer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView_farmerbill"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/text_subtotal_farmer"
+        android:layout_below="@+id/relative_farmer_title"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/relative_farmer_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/text_aboutus_image_farmerbill"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fpm"/>
+
+            <TextView
+                android:id="@+id/text_date_farmerbill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: 21 march 2016"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/sanfranciscodisplay_semibold"
+                android:layout_toEndOf="@+id/text_aboutus_image_farmerbill"/>
+            <TextView
+                android:id="@+id/text_invoice_farmerbill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice No: Sachin Ramling Mokashi"
+                android:textSize="15sp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/sanfranciscodisplay_semibold"
+                android:layout_below="@+id/text_date_farmerbill"
+                android:layout_toEndOf="@+id/text_aboutus_image_farmerbill"/>
+            <TextView
+                android:id="@+id/text_name_farmerbill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendor Name: Sachin Ramling Mokashi"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/sanfranciscodisplay_bold"
+                android:layout_below="@+id/text_invoice_farmerbill"
+                android:layout_toEndOf="@+id/text_aboutus_image_farmerbill"/>
+
+
+            <TextView
+                android:id="@+id/text_address_farmerbill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: at post neharungar nimani tal tasgaon"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/sanfranciscodisplay_semibold"
+                android:layout_below="@+id/text_name_farmerbill"
+                android:layout_toEndOf="@+id/text_aboutus_image_farmerbill"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/linear_farmerbill_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/relative_farmer_title1"
+            android:background="@drawable/bottom_borderline">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sanfranciscodisplay_bold"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Rate"
+                android:maxLines="1"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sanfranciscodisplay_bold"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qty"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sanfranciscodisplay_bold"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sanfranciscodisplay_bold"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_dyanamicrow_farmerbill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_farmerbill_title"
+             android:orientation="vertical">
+
+        </LinearLayout>
+
+</RelativeLayout>
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/text_subtotal_farmer"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="NetTotal: Rs2000"
+        android:fontFamily="@font/sanfranciscodisplay_bold"
+        android:textColor="@color/color_green1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="right"
+        android:layout_marginTop="1dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>

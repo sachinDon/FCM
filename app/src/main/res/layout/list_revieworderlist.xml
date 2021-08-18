@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounderwhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/image_rvorder"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="7dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:siShape="@drawable/shape_rounded_rectangle"
+            app:siSquare="true"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/default1"/>
+
+
+        <TextView
+            android:id="@+id/text_title_rvor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cabbage"
+            android:textAlignment="viewStart"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignTop="@+id/image_rvorder"
+            android:layout_toEndOf="@+id/image_rvorder"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+        <TextView
+            android:id="@+id/text_title_rvor_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 20/kg"
+            android:lines="1"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/text_title_rvor"
+            android:layout_toEndOf="@+id/image_rvorder"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/color_green1"
+            android:fontFamily="@font/sanfranciscodisplay_medium"/>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="20dp"
+    android:layout_alignParentEnd="true"
+    android:layout_centerVertical="true">
+
+    <TextView
+        android:id="@+id/text_title_rvor_kgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+    <TextView
+        android:id="@+id/text_title_rvor_kgs1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100kg"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text_title_rvor_kgs"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/color_green1"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+</RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linear_farmerbill_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/boderline_bottom1px">
+        <TextView
+            android:id="@+id/text_farmer_date11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textSize="15sp"
+
+            />
+        <TextView
+            android:id="@+id/text_farmerbill_name11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="vender Name"
+            android:maxLines="1"
+            android:layout_weight="1.4"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/text_farmer_totals11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textSize="15sp"
+
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>

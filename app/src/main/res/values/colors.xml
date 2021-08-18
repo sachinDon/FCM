@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2b3340</color>
+    <color name="colorAccent">#f543bcff</color>
+    <color name="backroundblue">#008080</color>
+    <!--<color name="backroundblue">#b34700</color>-->
+    <color name="tabtextblue">#f2307fac</color>
+    <color name="white">#ffffff</color>
+    <color name="txt_lightgray">#babcbe</color>
+    <color name="txt_lightgray_241">#e7e7e7</color>
+    <color name="black">#414141</color>
+    <color name="red">#ff0000</color>
+    <color name="transperent">#05000000</color>
+    <color name="gray">#DCDCDC</color>
+    <color name="Lightyellow">#F2F5A9</color>
+    <color name="pink">#D000A7</color>
+    <color name="colorlightgray2">#c4c4c4</color>
+    <color name="grouptablevicecolor">#fbe1e1e1</color>
+    <color name="txt_lightgray_coloumn">#a3a3a3</color>
+    <color name="backbluealpha">#dcf2fd</color>
+    <color name="lighit_gray_sys">#FFCCCCCC</color>
+    <color name="darkgray">#959494</color>
+    <color name="color_green">#66cc00</color>
+    <color name="color_green1">#00b33c</color>
+    <color name="color_backroundview">#2b3340</color>
+    <color name="color_backroundview1">#34495E</color>
+
+
+</resources>

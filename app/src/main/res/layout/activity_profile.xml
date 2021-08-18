@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.wkweb.com.vmart.ProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_prof_head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/text_back_chnage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:text="Profile"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/text_back_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="40dp"
+            android:text="Back"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/sanfranciscodisplay_medium"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_prof_head">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <TextView
+                   android:id="@+id/profo_logo"
+                   android:layout_width="110dp"
+                   android:layout_height="110dp"
+                   android:layout_marginTop="15dp"
+                   android:text="S"
+                   android:gravity="center"
+                   android:textAlignment="center"
+                   android:textColor="@color/white"
+                   android:textAllCaps="true"
+                   android:textSize="60sp"
+                   android:background="@drawable/circle"
+                   android:layout_centerHorizontal="true"
+                   />
+               <TextView
+                   android:id="@+id/pro_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:padding="5dp"
+                   android:layout_below="@+id/profo_logo"
+                   android:text="Sachin Mokashi"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:layout_centerHorizontal="true"
+                   />
+
+               <TextView
+                   android:id="@+id/pro_editprofile"
+                   android:layout_width="match_parent"
+                   android:layout_height="55dp"
+                   android:layout_marginEnd="20dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginTop="30dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:layout_below="@+id/pro_name"
+                   android:text="Edit Profile"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:fontFamily="@font/sanfranciscodisplay_medium"
+                   android:textColor="@color/black"
+                   android:background="@drawable/roubdedgray"
+                   android:layout_centerHorizontal="true"
+                   />
+
+
+               <TextView
+                   android:id="@+id/pro_address"
+                   android:layout_width="match_parent"
+                   android:layout_height="55dp"
+                   android:layout_marginEnd="20dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginTop="20dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:layout_below="@+id/pro_editprofile"
+                   android:text="My Address"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:fontFamily="@font/sanfranciscodisplay_medium"
+                   android:textColor="@color/black"
+                   android:background="@drawable/roubdedgray"
+                   android:layout_centerHorizontal="true"
+                   />
+
+               <TextView
+                   android:id="@+id/pro_Cahngepass"
+                   android:layout_width="match_parent"
+                   android:layout_height="55dp"
+                   android:layout_marginEnd="20dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginTop="20dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:layout_below="@+id/pro_address"
+                   android:text="Change Password"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:fontFamily="@font/sanfranciscodisplay_medium"
+                   android:textColor="@color/black"
+                   android:background="@drawable/roubdedgray"
+                   android:layout_centerHorizontal="true"
+                   />
+
+               <TextView
+                   android:id="@+id/pro_DeleteAccount"
+                   android:layout_width="match_parent"
+                   android:layout_height="55dp"
+                   android:layout_marginEnd="20dp"
+                   android:layout_marginStart="20dp"
+                   android:layout_marginTop="20dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:layout_below="@+id/pro_Cahngepass"
+                   android:text="Logout"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:fontFamily="@font/sanfranciscodisplay_medium"
+                   android:textColor="@color/black"
+                   android:background="@drawable/roubdedgray"
+                   android:layout_centerHorizontal="true"
+                   />
+
+           </RelativeLayout>
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

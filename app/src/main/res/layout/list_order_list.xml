@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/boderline_bottom1px">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/text_orderid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:lines="1"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16sp"
+        android:text="Order_id: ffdffff"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+    <TextView
+        android:id="@+id/text_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="viewStart"
+        android:lines="1"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/text_orderid"
+        android:text="Date: 20-01-2020"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+    <TextView
+        android:id="@+id/text_order_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_order_date"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/sanfranciscodisplay_medium"
+        android:lines="1"
+        android:text="Total amount: Rs 1010"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_order_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: pending"
+        android:lines="1"
+        android:layout_below="@+id/text_order_total"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+    <TextView
+        android:id="@+id/text_order_paymentmode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment: Cash On Dilevery"
+        android:lines="1"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/text_order_status"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_orderid"
+        android:layout_alignEnd="@+id/text_order_status"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/text_oeder_details"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="i"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/info"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+        <TextView
+            android:id="@+id/text_order_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="7dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="7dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounderwhite"
+            android:textSize="16sp"
+            android:layout_below="@+id/text_oeder_details"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+</RelativeLayout>
+

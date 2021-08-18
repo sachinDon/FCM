@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/image_cart_cust"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="7dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:siShape="@drawable/shape_rounded_rectangle"
+        app:siSquare="true"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/default1"/>
+
+
+
+    <TextView
+        android:id="@+id/text_title_cart_cust"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cabbage"
+        android:textAlignment="viewStart"
+        android:lines="1"
+        android:layout_marginTop="-4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignTop="@+id/image_cart_cust"
+        android:layout_toEndOf="@+id/image_cart_cust"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_bold"/>
+
+    <TextView
+        android:id="@+id/text_cart_cust1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rs 20/250gm"
+        android:lines="1"
+        android:layout_below="@+id/text_title_cart_cust"
+        android:layout_toEndOf="@+id/image_cart_cust"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+    <TextView
+        android:id="@+id/text_cart_cust2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Values: 2 x 20"
+        android:lines="1"
+        android:layout_below="@+id/text_cart_cust1"
+        android:layout_toEndOf="@+id/image_cart_cust"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+    <TextView
+        android:id="@+id/text_cart_cust3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: Rs 400/-"
+        android:lines="1"
+        android:layout_below="@+id/text_cart_cust2"
+        android:layout_toEndOf="@+id/image_cart_cust"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/sanfranciscodisplay_medium"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_slects_custveg1"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/text_cart_cust3"
+        android:background="@drawable/border_round_blue">
+
+        <TextView
+            android:id="@+id/text_setprice_custveg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/color_backroundview"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/sanfranciscodisplay_semibold"
+            android:text="100gm"/>
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="4dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/sanfranciscodisplay_semibold"
+            android:background="@drawable/exparrow"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_custadd"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+        android:layout_below="@+id/text_cart_cust3"
+android:layout_toEndOf="@+id/relative_slects_custveg1"
+    android:layout_marginStart="25dp">
+
+    <TextView
+    android:id="@+id/text_cart_minus"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:text="-"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:fontFamily="@font/sanfranciscodisplay_bold"
+    android:textSize="20sp"
+    android:background="@color/red"/>
+
+    <TextView
+    android:id="@+id/text_cart_qtytitle"
+    android:layout_width="70dp"
+    android:layout_height="35dp"
+    android:text="1"
+    android:gravity="center"
+        android:textColor="@color/colorPrimary"
+    android:layout_toEndOf="@+id/text_cart_minus"
+    android:fontFamily="@font/sanfranciscodisplay_bold"
+    android:textSize="18sp"
+    android:background="@color/backbluealpha"/>
+    <TextView
+    android:id="@+id/text_cart_plus"
+    android:layout_width="35dp"
+    android:layout_height="35dp"
+    android:text="+"
+
+    android:gravity="center"
+    android:layout_toEndOf="@+id/text_cart_qtytitle"
+    android:fontFamily="@font/sanfranciscodisplay_bold"
+    android:textSize="20sp"
+    android:textColor="@color/white"
+    android:background="@color/color_green1"/>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/text_cart_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_below="@+id/text_title_cart_cust"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/sanfranciscodisplay_medium"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:background="@drawable/delete1"/>
+
+    <TextView
+        android:id="@+id/text_border_cart"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/relative_custadd"
+        android:background="@color/gray"/>
+
+</RelativeLayout>

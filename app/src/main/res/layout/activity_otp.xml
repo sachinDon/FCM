@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backroundblue">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/phn_editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:inputType="phone"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/phn_editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/phn_editText1"
+                android:layout_toRightOf="@+id/phn_editText1"
+                android:background="@null"
+                android:gravity="start"
+                android:layout_marginTop="45dp"
+                android:inputType="phone"
+                android:hint="Enter Mobile No."
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phn_editText1"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/sanfranciscodisplay_regular"
+                android:gravity="center"
+                android:lineSpacingExtra="5sp"
+                android:padding="10dp"
+                android:text="Please enter your mobile no. starting with +(Country Code). You will receive a SMS on this no. with a verification code. Standard cellular rates may apply. "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/blkborder_yellow_backgroung"
+                android:fontFamily="@font/sanfranciscodisplay_regular"
+                android:text="Submit"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

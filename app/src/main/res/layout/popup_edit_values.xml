@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/popup_dialog_edit_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_rounded_rectangle"
+        >
+
+        <TextView
+            android:id="@+id/textview_alert_invite_title_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
+            android:text="Edit Details"
+            />
+
+        <TextView
+            android:id="@+id/textview_alert_invite_message_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:layout_below="@+id/textview_alert_invite_title_edit"
+            android:text="To update your name and mobile number, please enter your details."
+            />
+
+        <EditText
+            android:id="@+id/textview_emailtext_edit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:maxLines="1"
+            android:inputType="text|textNoSuggestions"
+            android:layout_below="@+id/textview_alert_invite_message_edit"
+            android:hint="Enter name"
+            android:background="@drawable/blackline_border"/>
+
+        <EditText
+            android:id="@+id/textview_emailtext_edit1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:maxLines="1"
+            android:inputType="text|textNoSuggestions"
+            android:layout_below="@+id/textview_emailtext_edit"
+            android:hint="Enter mobile number"
+            android:background="@drawable/blackline_border"/>
+
+
+
+
+        <TextView
+            android:id="@+id/textview_alert_topborder"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_below="@+id/textview_emailtext_edit1"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            android:background="@color/txt_lightgray_241"
+            />
+
+        <TextView
+            android:id="@+id/textview_alert_hzborder"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:layout_alignTop="@+id/textview_alert_topborder"
+            android:layout_centerHorizontal="true"
+            android:background="@color/txt_lightgray_241"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textview_alert_msg_cancel_edit"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignRight="@+id/textview_alert_hzborder"
+            android:layout_alignTop="@+id/textview_alert_topborder"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent"
+            android:textSize="19dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textview_alert_msg_ok_edit"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignRight="@+id/textview_emailtext_edit"
+            android:layout_alignTop="@+id/textview_alert_topborder"
+            android:gravity="center"
+            android:text="Send"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:textStyle="normal" />
+
+</RelativeLayout>
+
+
+</RelativeLayout>
