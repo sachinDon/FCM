@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Vmart.iml" filepath="$PROJECT_DIR$/Vmart.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Vmart.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Vmart.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FCM.iml" filepath="$PROJECT_DIR$/.idea/modules/FCM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FCM.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FCM.app.iml" />
     </modules>
   </component>
 </project>

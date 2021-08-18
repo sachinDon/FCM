@@ -38,9 +38,27 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.security.SecureRandom;
 import java.util.Iterator;
+import java.util.Properties;
 
 import javax.net.ssl.HttpsURLConnection;
+
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+import javax.net.ssl.HttpsURLConnection;
+import javax.sql.DataSource;
+
 
 import androidx.appcompat.app.AlertDialog;
 
@@ -50,7 +68,7 @@ public class LoginActivity extends Activity {
     private EditText eEmail, ePassword;
     private Button buton_login;
     FrameLayout framelogin;
-    String str_emailchk="no",str_emailid;
+    String str_emailchk="no",str_emailid,str_password,str_message;
     public SharedPreferences pref;
     SharedPreferences.Editor editor;
     ProgressDialog progressDialog;
@@ -110,8 +128,8 @@ public class LoginActivity extends Activity {
                 textview_title_dialog.setText("To send your password, please enter your registered email address.");
                 textview_email_No_enter.setHint("Enter email address");
 
-                InputMethodManager imm = (InputMethodManager)getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+//                InputMethodManager imm = (InputMethodManager)getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+//                imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(LoginActivity.this);
                 // this is set the view from XML inside AlertDialog
@@ -191,13 +209,22 @@ public class LoginActivity extends Activity {
                         //   str_emailAdd="";
                         dialog1.dismiss();
 
-                        progressDialog = new ProgressDialog(LoginActivity.this);
-                        progressDialog.setMessage("Loading..."); // Setting Message
-                        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
-                        progressDialog.show(); // Display Progress Dialog
-                        progressDialog.setCancelable(false);
+                        final String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+                        SecureRandom rnd = new SecureRandom();
+                        StringBuilder sb = new StringBuilder(4);
+                        for(int i = 0; i <= 4; i++)
+                        {
+                            sb.append(AB.charAt(rnd.nextInt(AB.length())));
+                        }
+                        str_password = sb.toString();
+                        str_message = "Password: " + str_password;
 
-                        new communication_forgotpassword().execute();
+//                        View view1 = LoginActivity.this.getCurrentFocus();
+//                        if (view1 != null) {
+//                            InputMethodManager inputManager = (InputMethodManager) LoginActivity.this.getSystemService(Context.INPUT_METHOD_SERVICE);
+//                            inputManager.hideSoftInputFromWindow(view1.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+//                        }
+                        new JavaMailAPI().execute();
 
                     }
                 });
@@ -535,6 +562,7 @@ public class LoginActivity extends Activity {
 
 
                 postDataParams.put("email",str_emailid);
+                postDataParams.put("password",str_password);
                 Log.e("params", postDataParams.toString());
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(15000 /* milliseconds */);
@@ -611,7 +639,7 @@ public class LoginActivity extends Activity {
                     else if (result.equalsIgnoreCase("sent"))
                     {
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(LoginActivity.this);
-                        builder2.setTitle("Oops");
+                        builder2.setTitle("Updated password!");
                         builder2.setMessage("Your password has been sent to your registered email address. Thank-you!");
                         builder2.setCancelable(false);
                         builder2.setPositiveButton("Ok",
@@ -626,7 +654,7 @@ public class LoginActivity extends Activity {
 
 
                     }
-                    if (result.equalsIgnoreCase("updateerror"))
+                    else if (result.equalsIgnoreCase("updateerror"))
                     {
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(LoginActivity.this);
                         builder2.setTitle("Oops");
@@ -642,6 +670,23 @@ public class LoginActivity extends Activity {
                         alert11 = builder2.create();
                         alert11.show();
 
+
+                    }
+                    else
+                    {
+                        AlertDialog.Builder builder2 = new AlertDialog.Builder(LoginActivity.this);
+                        builder2.setTitle("Oops");
+                        builder2.setMessage("Server could not found.");
+                        builder2.setCancelable(false);
+                        builder2.setPositiveButton("Ok",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                        // finish();
+                                    }
+                                });
+                        alert11 = builder2.create();
+                        alert11.show();
 
                     }
 
@@ -710,7 +755,64 @@ public class LoginActivity extends Activity {
         }
         return result.toString();
     }
+    public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
+        private ProgressDialog progressDialog1;
+        private Session session;
 
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            //Showing progress dialog while sending email
+            progressDialog1 = ProgressDialog.show(LoginActivity.this,"Send password","Please wait...",false,false);
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            //Dismissing the progress dialog
+            progressDialog1.dismiss();
+            //Showing a success message
+            // Toast.makeText(context,"Message Sent", Toast.LENGTH_LONG).show();
+            progressDialog = new ProgressDialog(LoginActivity.this);
+            progressDialog.setMessage("Loading..."); // Setting Message
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);                                             progressDialog.show(); // Display Progress Dialog
+            progressDialog.setCancelable(false);
+            progressDialog.show();
+
+            new communication_forgotpassword().execute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            Properties properties = new Properties();
+            properties.put("mail.smtp.host", "smtp.gmail.com");
+            properties.put("mail.smtp.socketFactory.port", "465");
+            properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+            properties.put("mail.smtp.auth", "true");
+            properties.put("mail.smtp.port", "465");
+            session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication(Urlclass.EMAIL, Urlclass.PASSWORD);
+                }
+            });
+
+
+
+            MimeMessage mimeMessage = new MimeMessage(session);
+            try {
+                mimeMessage.setFrom(new InternetAddress(Urlclass.EMAIL));
+                mimeMessage.addRecipients(Message.RecipientType.TO, String.valueOf(new InternetAddress(str_emailid)));
+                mimeMessage.setSubject("Your password has been updated sucessful!");
+                mimeMessage.setText(str_message);
+                Transport.send(mimeMessage);
+            } catch (MessagingException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+
+        }
+    }
     public void onBackPressed() {
 
     }

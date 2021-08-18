@@ -6,6 +6,10 @@ package info.wkweb.com.vmart;
 
 public class Urlclass
 {
+    //Gmail
+
+    public static final  String EMAIL = "Fairpricemandis@gmail.com";
+    public static final String PASSWORD = "Asdf@#1234";
     public static String url = "http://fairpricemandi.akwisys.com/";//"http://fairpricemandi.bestharvest.co.in/";//"http://fairpricemandi.akwisys.com/";//http://mokashisachin.000webhostapp.com/";
     public static String register = url + "register.php";
     public static String login = url+"login.php";
